@@ -1,0 +1,71 @@
+body {
+    animation: bg-change 7s infinite;
+}
+header {
+    color: rgb(250, 4, 156);
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    animation: slide-in 2s forwards;
+}
+p{
+    font-size: 20px;
+    text-align: center;
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slide-in{
+    0%{
+        transform: translateY(-200%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bg-change {
+    0%{
+        background-color: blue;
+    }
+    30%{
+        background-color: blueviolet;
+    }
+    60% {
+        background-color: yellow;
+    }
+    100%{
+        background-color: rgb(250, 4, 156);
+    }
+}
+
+.square {
+    height: 150px;
+    width: 300px;
+    background-color: blue;
+    position: relative;
+    animation: spin 1ms ease 2s infinite ;
+}
+@keyframes spin {
+    0%{
+        translate:rotate(0deg);
+        Top: 0;
+    }
+    30%{
+        Translate:rotate(45deg);
+    }
+    100%{
+        translate:rotate(360deg);
+        Top: 150px;
+    }
+}
